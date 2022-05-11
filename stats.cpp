@@ -7,9 +7,9 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<double> &v ) {
     
     if(v.size()==0)
     {
-        obj.average = 0/0;
-        obj.max = 0/0;
-        obj.min = 0/0;
+        obj.average = sqrt(-1);
+        obj.max = sqrt(-1);
+        obj.min = sqrt(-1);
         
         return obj;
     }
