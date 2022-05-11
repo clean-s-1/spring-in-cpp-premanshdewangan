@@ -1,4 +1,6 @@
+#include<iostream>
 #include <vector>
+
 
 namespace Statistics {
     
@@ -39,5 +41,5 @@ class StatsAlerter{
     public:
         StatsAlerter(float, std::vector<IAlerter*> &);
     
-        void checkAndAlert(vector<float> &);
+        void checkAndAlert(std::vector<float> &);
 };
