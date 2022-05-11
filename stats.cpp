@@ -1,5 +1,5 @@
 #include "stats.h"
-#include "cmath"
+#include <cmath>
 
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<double> &v ) {
     //Implement statistics here
@@ -39,4 +39,42 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<double> &v ) {
     return obj;
     
     
+}
+
+
+void EmailAlert :: alertMessage(string msg)
+{
+    cout << msg << endl;
+}
+
+
+void LEDAlert :: alertMessage(string msg)
+{
+    cout << msg << endl;
+}
+
+
+StatsAlerter :: StatsAlerter(float threshold, std::vector<IAlerter*> &v) : alerters({})
+{
+    this->threshold = threshold;
+    for(auto itr : v)
+    {
+        alerts.push_back(itr);
+    }
+}
+
+
+void StatsAlerter :: checkAndAlert(vector<float> &v){
+    float max = 0.0;
+    for(auto itr : v )
+    {
+        if(max < itr)
+            max = itr;
+    }    
+    
+    if(max > this->threshold)
+    {
+        this->alerters[0]->emailSent = true;
+        this->alerters[1]->ledGlows = true;
+    }  
 }
