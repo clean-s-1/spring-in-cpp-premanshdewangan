@@ -41,18 +41,18 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<double> &v ) {
     
 }
 
-/*
-void EmailAlert :: alertMessage(std::string msg)
+
+virtual void EmailAlert :: setAlert()()
 {
-    std::cout << msg << std::endl;
+    emailSent = true;
 }
 
 
-void LEDAlert :: alertMessage(std::string msg)
+virtual void LEDAlert :: setAlert()()
 {
-    std::cout << msg << std::endl;
+    ledGlows = true;
 }
-*/
+
 
 StatsAlerter :: StatsAlerter(float threshold, std::vector<IAlerter*> &v)
 {
