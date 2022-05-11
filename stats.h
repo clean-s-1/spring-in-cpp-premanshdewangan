@@ -16,20 +16,20 @@ namespace Statistics {
 }
 
 class IAlerter{
-    public:
-        virtual void alertMessage(std::string) = 0;
+//     public:
+//         virtual void alertMessage(std::string) = 0;
 };
 
 class EmailAlert : public IAlerter{
     public:
         bool emailSent;
-        void alertMessage(std::string);
+//         void alertMessage(std::string);
 };
 
 class LEDAlert : public IAlerter{
     public:
         bool ledGlows;
-        void alertMessage(std::string);
+//         void alertMessage(std::string);
 };
 
 
