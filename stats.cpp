@@ -42,13 +42,13 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<double> &v ) {
 }
 
 
-virtual void EmailAlert :: setAlert()
+void EmailAlert :: setAlert()
 {
     emailSent = true;
 }
 
 
-virtual void LEDAlert :: setAlert()
+void LEDAlert :: setAlert()
 {
     ledGlows = true;
 }
@@ -73,8 +73,8 @@ void StatsAlerter :: checkAndAlert(std::vector<float> &v){
     
     if(max > this->threshold)
     {
-        this->alerters[0]->emailSent = true;
-        this->alerters[1]->ledGlows = true;
+        this->alerters[0]->setAlert();
+        this->alerters[1]->setAlert();
     } 
        
 }
