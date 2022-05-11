@@ -42,15 +42,15 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<double> &v ) {
 }
 
 
-void EmailAlert :: alertMessage(string msg)
+void EmailAlert :: alertMessage(std::string msg)
 {
-    cout << msg << endl;
+    std::cout << msg << std::endl;
 }
 
 
-void LEDAlert :: alertMessage(string msg)
+void LEDAlert :: alertMessage(std::string msg)
 {
-    cout << msg << endl;
+    std::cout << msg << std::endl;
 }
 
 
