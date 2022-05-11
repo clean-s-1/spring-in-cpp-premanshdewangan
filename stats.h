@@ -15,6 +15,7 @@ namespace Statistics {
     Stats ComputeStatistics(const std::vector<double>& );
 }
 
+/*
 class IAlerter{
 //     public:
 //         virtual void alertMessage(std::string) = 0;
@@ -30,6 +31,26 @@ class LEDAlert : public IAlerter{
     public:
         bool ledGlows;
 //         void alertMessage(std::string);
+};
+*/
+
+class EmailAlert{
+    protected:
+        bool emailSent;
+};
+
+class LEDAlert{
+    protected:
+        bool ledGlows;
+};
+
+class IAlerter : public EmailAlert, public LEDAlert{
+    public:
+        setALerts(bool e, bool l)
+        {
+            EmailAlert::emailSent = true;
+            LEDAlert::ledGlows = true;
+        }
 };
 
 
