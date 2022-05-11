@@ -1,14 +1,6 @@
 #include "stats.h"
 
-struct Stats{
-    double max;
-    double min;
-    double average;
-};
-
-typedef struct Stats Stats;
-
-Stats Statistics::ComputeStatistics(const std::vector<double> &v ) {
+Statistics::Stats Statistics::ComputeStatistics(const std::vector<double> &v ) {
     //Implement statistics here
     Stats obj;
     
