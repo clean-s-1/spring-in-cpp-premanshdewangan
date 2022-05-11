@@ -3,7 +3,7 @@
 
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<double> &v ) {
     //Implement statistics here
-    Stats obj;
+    Statistics::Stats obj;
     
     if(v.size()==0)
     {
