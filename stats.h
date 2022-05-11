@@ -42,5 +42,5 @@ class StatsAlerter{
     public:
         StatsAlerter(float, std::vector<IAlerter*> &);
     
-        void checkAndAlert(float &arr[]);
+        void checkAndAlert(float arr[]);
 };
