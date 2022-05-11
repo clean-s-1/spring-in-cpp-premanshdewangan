@@ -2,7 +2,7 @@
 
 #include "catch.hpp"
 #include "stats.h"
-
+#include <vector>
 #include <cmath>
 
 TEST_CASE("reports average, minimum and maximum") {
@@ -29,7 +29,8 @@ TEST_CASE("raises alerts when max is greater than threshold") {
     
     const float maxThreshold = 10.2;
     StatsAlerter statsAlerter(maxThreshold, alerters);
-    statsAlerter.checkAndAlert({99.8, 34.2, 4.5, 6.7});
+    std::vector<float> v = {99.8, 34.2, 4.5, 6.7};
+    statsAlerter.checkAndAlert(v);
 
     REQUIRE(emailAlert.emailSent);
     REQUIRE(ledAlert.ledGlows);
