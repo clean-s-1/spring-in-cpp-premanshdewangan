@@ -62,7 +62,7 @@ StatsAlerter :: StatsAlerter(float threshold, std::vector<IAlerter*> &v)
 }
 
 
-void StatsAlerter :: checkAndAlert(vector<float> &v){
+void StatsAlerter :: checkAndAlert(std::vector<float> &v){
     
     float max = 0.0;
     for(auto itr : v )
