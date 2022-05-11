@@ -1,8 +1,18 @@
 #include "stats.h"
+#include "cmath"
 
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<double> &v ) {
     //Implement statistics here
     Stats obj;
+    
+    if(v.size()==0)
+    {
+        obj.average = 0/0;
+        obj.max = 0/0;
+        obj.min = 0/0;
+        
+        return obj;
+    }
     
     obj.min = 0;
     obj.max = 0;
