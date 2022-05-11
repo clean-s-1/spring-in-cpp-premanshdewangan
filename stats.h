@@ -37,10 +37,9 @@ class StatsAlerter{
     private:
         float threshold;
         std::vector<IAlerter*> alerters;
-        std::vector<float> v;
             
     public:
         StatsAlerter(float, std::vector<IAlerter*> &);
     
-        void checkAndAlert(float arr[]);
+        void checkAndAlert(vector<float> &v);
 };
