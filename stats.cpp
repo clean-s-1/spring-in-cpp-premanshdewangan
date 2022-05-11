@@ -59,7 +59,7 @@ StatsAlerter :: StatsAlerter(float threshold, std::vector<IAlerter*> &v) : alert
     this->threshold = threshold;
     for(auto itr : v)
     {
-        alerts.push_back(itr);
+        alerters.push_back(itr);
     }
 }
 
