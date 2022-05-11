@@ -62,7 +62,8 @@ StatsAlerter :: StatsAlerter(float threshold, std::vector<IAlerter*> &v)
 }
 
 
-void StatsAlerter :: checkAndAlert(std::vector<float> &v){
+void StatsAlerter :: checkAndAlert(float &arr[]){
+    /*
     float max = 0.0;
     for(auto itr : v )
     {
@@ -74,5 +75,8 @@ void StatsAlerter :: checkAndAlert(std::vector<float> &v){
     {
         this->alerters[0]->emailSent = true;
         this->alerters[1]->ledGlows = true;
-    }  
+    } 
+    */
+    
+    
 }
