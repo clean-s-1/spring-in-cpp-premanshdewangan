@@ -57,8 +57,14 @@ void LEDAlert :: alertMessage(std::string msg)
 StatsAlerter :: StatsAlerter(float threshold, std::vector<IAlerter*> &v)
 {
     this->threshold = threshold;
-    this->alerters[0] = v[0];
-    this->alerters[1] = v[1];
+    
+//     this->alerters[0] = v[0];
+//     this->alerters[1] = v[1];
+    
+    for(auto itr : v)
+    {
+        alerters.push_back(itr);
+    }
 }
 
 
